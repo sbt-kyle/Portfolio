@@ -18,8 +18,6 @@ function toggleNavLinks() {
     } else {
       navLinks.style.display = "none";
     }
-  } else {
-    navLinks.style.display = "block";
   }
 }
 
@@ -28,12 +26,16 @@ burgerIcon.addEventListener("click", function () {
 });
 
 window.addEventListener("resize", function () {
-  toggleNavLinks();
+  if (window.innerWidth > 834) {
+    navLinks.style.display = "block";
+  } else {
+    navLinks.style.display = "none";
+  }
 });
 
 // Set initial display style of nav links based on window width
-if (window.innerWidth > 834) {
-  navLinks.style.display = "block";
-} else {
+if (window.innerWidth <= 834) {
   navLinks.style.display = "none";
+} else {
+  navLinks.style.display = "block";
 }
