@@ -30,3 +30,10 @@ burgerIcon.addEventListener("click", function () {
 window.addEventListener("resize", function () {
   toggleNavLinks();
 });
+
+// Set initial display style of nav links based on window width
+if (window.innerWidth > 834) {
+  navLinks.style.display = "block";
+} else {
+  navLinks.style.display = "none";
+}
